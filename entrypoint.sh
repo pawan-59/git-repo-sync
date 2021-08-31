@@ -20,7 +20,7 @@ sed -ie "141 s/value:.*/value: https:\/\/gitee.com\/pawan_06d2\/devtr.git/" mani
 
 git config --global user.email "pawan@devtron.ai"
 git config --global user.name "pawan_06d2"
-git add .
+git add manifests/installation-script manifests/install/devtron-installer.yaml manifests/yamls/migrator.yaml
 git commit -m "updated github link to gitee"
 echo "manifests"
 ls manifests
