@@ -2,7 +2,7 @@ git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${I
 
 sed -ie "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
-sed -ie "s/REPO_RAW_URL:.*/REPO_RAW_URL: https:\/\/gitee.com\/pawan_06d2\/devtr\/raw\/main\/manifests\/installation-script/" manifests/installation-script
+sed -ie "s/REPO_RAW_URL=.*/REPO_RAW_URL= https:\/\/gitee.com\/pawan_06d2\/devtr\/raw\/main\/manifests\/installation-script/" manifests/installation-script
 
 sed -ie "s/url:.*/url: https:\/\/gitee.com\/pawan_06d2\/devtr\/raw\/main\/manifests\/installation-script/" manifests/install/devtron-installer.yaml
 
