@@ -1,6 +1,6 @@
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_URL#https://}
 
-sed -i "s/LTAG=.*/LTAG=\"main";/" manifests/installation-script
+sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
 sed -i "s/url:.*/url: https://gitee.com/pawan_06d2\/devtr\/raw\/main\/manifests\/installation-script/" manifests/install/devtron-installer.yaml
 
