@@ -1,4 +1,8 @@
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_URL#https://}
+echo "manifests"
+ls manifests
+echo "/manifests/install"
+ls manifests/install
 
 sed -ie "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
@@ -18,6 +22,10 @@ git config --global user.email "pawan@devtron.ai"
 git config --global user.name "pawan_06d2"
 git add .
 git commit -m "updated github link to gitee"
+echo "manifests"
+ls manifests
+echo "/manifests/install"
+ls manifests/install
 case "${GITHUB_EVENT_NAME}" in
     push)
         git push -f --all target
@@ -30,3 +38,7 @@ case "${GITHUB_EVENT_NAME}" in
         break
         ;;
 esac
+echo "manifests"
+ls manifests
+echo "/manifests/install"
+ls manifests/install
