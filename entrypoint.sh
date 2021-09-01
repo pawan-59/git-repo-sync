@@ -21,7 +21,7 @@ sed -ie "141 s/value:.*/value: https:\/\/gitee.com\/pawan_06d2\/devtr.git/" mani
 git config --global user.email "pawan@devtron.ai"
 git config --global user.name "pawan_06d2"
 
-git commit -am "updated github link to gitee"
+git commit -am "updated github link to gitee 1"
 echo "manifests"
 ls manifests
 echo "/manifests/install"
