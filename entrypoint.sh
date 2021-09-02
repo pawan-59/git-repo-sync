@@ -1,7 +1,5 @@
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_URL#https://}
 
-git config --global user.email "pawan@devtron.ai"
-git config --global user.name "pawan_06d2"
 
 case "${GITHUB_EVENT_NAME}" in
     push)
