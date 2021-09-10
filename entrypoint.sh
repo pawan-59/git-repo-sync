@@ -24,11 +24,11 @@ git commit -m "updated github link to gitee"
 
 case "${GITHUB_EVENT_NAME}" in
     release)
-        git push -f --all target
+        git push -f target main
         git push -f --tags target
         ;;
     push)
-        git push -f --all target
+        git push -f target main
         git push -f --tags target
         ;;
     delete)
