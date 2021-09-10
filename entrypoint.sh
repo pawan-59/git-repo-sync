@@ -19,6 +19,7 @@ git config --global user.name "prakarsh"
 
 git commit -am "updated github link to gitee"
 
+echo "{GITHUB_EVENT_NAME}"
 case "${GITHUB_EVENT_NAME}" in
     release)
         git push -f --all target
