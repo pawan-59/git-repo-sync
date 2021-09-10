@@ -21,13 +21,14 @@ git config --global user.name "prakarsh"
 
 git add .
 git commit -m "updated github link to gitee"
+git show-ref
 
 case "${GITHUB_EVENT_NAME}" in
     release)
-        git push -f target master
+        git push -f --all target 
         ;;
     push)
-        git push -f target main
+        git push -f --all target
         git push -f --tags target
         ;;
     delete)
