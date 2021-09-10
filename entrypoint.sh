@@ -21,7 +21,7 @@ git add .
 git commit -m "updated github link to gitee"
 
 case "${GITHUB_EVENT_NAME}" in
-    push)
+    release)
         git push -f --all target
         git push -f --tags target
         ;;
