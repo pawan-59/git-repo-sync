@@ -1,6 +1,7 @@
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_URL#https://}
 
-echo $(git branch)
+git branch
+
 sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
 sed -i "s/REPO_RAW_URL=.*/REPO_RAW_URL= https:\/\/gitee.com\/devtron-labs\/devtron\/raw/" manifests/installation-script
@@ -23,6 +24,10 @@ git commit -m "updated github link to gitee"
 
 case "${GITHUB_EVENT_NAME}" in
     release)
+        git push -f --all target
+        git push -f --tags target
+        ;;
+    push)
         git push -f --all target
         git push -f --tags target
         ;;
