@@ -17,25 +17,26 @@ sed -i "103 s/value:.*/value: https:\/\/gitee.com\/devtron-labs\/git-sensor.git/
 
 sed -i "141 s/value:.*/value: https:\/\/gitee.com\/devtron-labs\/lens.git/" manifests/yamls/migrator.yaml
 
-git config --global user.email "prakarsh@devtron.ai"
-git config --global user.name "prakarsh"
+git config --global user.email "pawan@devtron.ai"
+git config --global user.name "pawan_06d2"
 
 git add .
 git commit -m "updated github link to gitee"
-git show-ref
 
-case "${GITHUB_EVENT_NAME}" in
-    release)
-        git push -f target main
-        ;;
-    push)
-        git push -f --all target
-        git push -f --tags target
-        ;;
-    delete)
-        git push -d target ${GITHUB_EVENT_REF}
-        ;;
-    *)
-        break
-        ;;
-esac
+git push target main
+
+#case "${GITHUB_EVENT_NAME}" in
+#    release)
+#        git push -f target main
+#        ;;
+#    push)
+#        git push -f --all target
+#        git push -f --tags target
+#        ;;
+ #   delete)
+ #       git push -d target ${GITHUB_EVENT_REF}
+ #       ;;
+ #   *)
+ #       break
+ #       ;;
+#esac
