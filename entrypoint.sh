@@ -4,6 +4,7 @@ git clone https://github.com/pawan-59/devtron.git
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@gitee.com/pawan_06d2/devtr.git
 cd devtron
 git checkout main
+git remote -v
 
 sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
