@@ -1,6 +1,7 @@
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_URL#https://}
 
-git branch
+git clone https://github.com/pawan-59/devtron.git
+cd devtron
 
 sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
@@ -25,7 +26,7 @@ git show-ref
 
 case "${GITHUB_EVENT_NAME}" in
     release)
-        git push -f --all target 
+        git push -f target main
         ;;
     push)
         git push -f --all target
