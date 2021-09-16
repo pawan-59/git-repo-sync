@@ -19,9 +19,9 @@ sed -i "103 s/value:.*/value: https:\/\/gitee.com\/devtron-labs\/git-sensor.git/
 
 sed -i "141 s/value:.*/value: https:\/\/gitee.com\/devtron-labs\/lens.git/" manifests/yamls/migrator.yaml
 
-git config --global user.email ${INPUT_USER_EMAIL}
+git config --global user.email ${INPUT_TARGET_USEREMAIL}
 
-git config --global user.name ${INPUT_USER_NAME}
+git config --global user.name ${INPUT_TARGET_USERNAME}
 
 
 git add .
