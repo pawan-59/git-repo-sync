@@ -15,7 +15,7 @@ inputs:
   target-token:
     description: 'Target Token'
     required: true
-  target-email:
+  target-useremail:
     description: 'Target User Email'
     required: true
 runs:
@@ -28,4 +28,4 @@ runs:
         INPUT_TARGET_USERNAME: ${{ inputs.target-username }}
         INPUT_TARGET_TOKEN: ${{ inputs.target-token }}
         GITHUB_EVENT_REF: ${{ github.event.ref }}
-        INPUT_TARGET_USEREMAIL: ${{ inputs.target-email }}
+        INPUT_TARGET_USEREMAIL: ${{ inputs.target-useremail }}
