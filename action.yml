@@ -27,6 +27,12 @@ inputs:
   git-source-dir:
     description: 'Source directory'
     required: true
+  script-file:
+    description: 'Script file to run'
+    required: true
+  working-dir:
+    description: 'Working Directory'
+    required: true
 runs:
   using: "composite"
   steps:
