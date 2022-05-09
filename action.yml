@@ -6,9 +6,12 @@ branding:
   color: gray-dark
 
 inputs:
-  git-target-url:
+  git-target-repo:
     description: 'Target Repo URL'
     required: true
+  git-source-repo:
+    description: 'source Repo URL'
+    required: true 
   git-target-username:
     description: 'Target Repo Username'
     required: true
@@ -30,7 +33,8 @@ runs:
     - run: ${{ github.action_path }}/entrypoint.sh
       shell: bash
       env:
-        INPUT_TARGET_URL: ${{ inputs.git-target-url }}
+        INPUT_SOURCE_REPO: ${{ inputs.git-source-repo }}
+        INPUT_TARGET_REPO: ${{ inputs.git-target-repo }}
         INPUT_TARGET_USERNAME: ${{ inputs.git-target-username }}
         INPUT_TARGET_TOKEN: ${{ inputs.git-target-token }}
         GITHUB_EVENT_REF: ${{ github.event.ref }}
