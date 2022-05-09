@@ -1,6 +1,6 @@
 git clone $INPUT_SOURCE_REPO
 git clone $INPUT_TARGET_REPO
-cd helm-chart
+cd $TARGET_DIR
 git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${INPUT_TARGET_REPO#https://}
 
 git checkout main
