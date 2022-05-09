@@ -30,7 +30,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/entrypoint.sh
+    - run: ${{ github.action_path }}/${{ inputs.script-file }}
       shell: bash
       env:
         INPUT_SOURCE_REPO: ${{ inputs.git-source-repo }}
