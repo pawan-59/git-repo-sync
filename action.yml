@@ -36,7 +36,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/${{ inputs.script-file }}.sh
+    - run: ${{ github.action_path }}/chart-sync.sh
       shell: bash
       env:
         INPUT_SOURCE_REPO: ${{ inputs.git-source-repo }}
