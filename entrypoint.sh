@@ -6,6 +6,9 @@ git remote add target https://${INPUT_TARGET_USERNAME}:${INPUT_TARGET_TOKEN}@${I
 git checkout main
 git remote -v
 
+git config --global user.email ${INPUT_TARGET_USEREMAIL}
+git config --global user.name ${INPUT_TARGET_USERNAME}
+
 cp -r ../${{INPUT_SOURCE_DIR}} $INPUT_TARGET_DIR
 git add .
 git commit -m "Synching Repo"
