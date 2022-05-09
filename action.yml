@@ -30,7 +30,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/${{ inputs.script-file }}
+    - run: ${{ github.action_path }}/${{ inputs.script-file }}.sh
       shell: bash
       env:
         INPUT_SOURCE_REPO: ${{ inputs.git-source-repo }}
@@ -41,3 +41,4 @@ runs:
         INPUT_TARGET_USEREMAIL: ${{ inputs.git-target-useremail }}
         INPUT_TARGET_DIR: ${{ inputs.git-target-dir }}
         INPUT_SOURCE_DIR: ${{ inputs.git-source-dir }}
+        INPUT_WORKING_DIR: ${{ inputs.working-dir }}
