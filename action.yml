@@ -33,6 +33,18 @@ inputs:
   working-dir:
     description: 'Working Directory'
     required: true
+  target-url:
+    description: 'Target URL for Gitee'
+    required: true
+  target-username:
+    description: 'Target username for Gitee'
+    required: true
+  target-token:
+    description: 'Target toekn for Gitee'
+    required: true
+  target-useremail:
+    description: 'Target email for Gitee'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -41,10 +53,14 @@ runs:
       env:
         INPUT_SOURCE_REPO: ${{ inputs.git-source-repo }}
         INPUT_TARGET_REPO: ${{ inputs.git-target-repo }}
-        INPUT_TARGET_USERNAME: ${{ inputs.git-target-username }}
-        INPUT_TARGET_TOKEN: ${{ inputs.git-target-token }}
-        GITHUB_EVENT_REF: ${{ github.event.ref }}
-        INPUT_TARGET_USEREMAIL: ${{ inputs.git-target-useremail }}
+        INPUT_GIT_TARGET_USERNAME: ${{ inputs.git-target-username }}
+        INPUT_GIT_TARGET_TOKEN: ${{ inputs.git-target-token }}
+        INPUT_GIT_TARGET_USEREMAIL: ${{ inputs.git-target-useremail }}
         INPUT_TARGET_DIR: ${{ inputs.git-target-dir }}
+        INPUT_GITEE_TARGET_URL: ${{ inputs.target-url }}
+        INPUT_GITEE_TARGET_USERNAME: ${{ inputs.target-username }}
+        INPUT_GITEE_TARGET_TOKEN: ${{ inputs.target-token }}
+        GITHUB_EVENT_REF: ${{ github.event.ref }}
+        INPUT_GITEE_TARGET_USEREMAIL: ${{ inputs.target-useremail }}
         INPUT_SOURCE_DIR: ${{ inputs.git-source-dir }}
         INPUT_WORKING_DIR: ${{ inputs.working-dir }}
