@@ -4,7 +4,6 @@ ls
 pwd
 git clone $INPUT_TARGET_REPO
 pwd
-cd ..
 ls
 cd $INPUT_WORKING_DIR
 pwd
