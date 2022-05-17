@@ -1,5 +1,7 @@
 git clone $INPUT_SOURCE_REPO
+cd ..
 git clone $INPUT_TARGET_REPO
+cd ..
 ls
 cd $INPUT_WORKING_DIR
 pwd
