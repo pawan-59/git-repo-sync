@@ -5,6 +5,8 @@ git remote add target https://${INPUT_GITEE_TARGET_USERNAME}:${INPUT_GITEE_TARGE
 git checkout main
 git remote -v
 
+echo "Hello"
+
 sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
 sed -i "s/REPO_RAW_URL=.*/REPO_RAW_URL=\"https:\/\/gitee.com\/devtron-labs\/devtron\/raw\/\";/" manifests/installation-script
