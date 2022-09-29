@@ -5,7 +5,7 @@ git remote add target https://${INPUT_GITEE_TARGET_USERNAME}:${INPUT_GITEE_TARGE
 git checkout main
 git remote -v
 
-echo "Hello"
+echo "Helloooo"
 
 sed -i "s/LTAG=.*/LTAG=\"main\";/" manifests/installation-script
 
