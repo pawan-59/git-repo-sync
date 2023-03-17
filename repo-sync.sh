@@ -1,2 +1,3 @@
-sudo apt update 
-sudo apt install gh
+apt update 
+apt install gh
+echo "successful"
