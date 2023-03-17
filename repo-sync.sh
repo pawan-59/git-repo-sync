@@ -1,2 +1,2 @@
-apt update 
-apt install gh
+sudo apt update 
+sudo apt install gh
