@@ -1,3 +1,3 @@
 apt update 
 apt install gh
-echo "successful"
+echo "successful "
